@@ -8,7 +8,7 @@ class InformasiKalkulatorController extends Controller
 {
     public function tampilkan()
     {
-        return view('informasi-wajib-pajak');
+        return view('informasi_wajib_pajak');
     }
 }
 
