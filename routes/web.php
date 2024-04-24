@@ -9,6 +9,7 @@ use App\Http\Controllers\PenghasilanController;
 use App\Http\Controllers\QuizPajakController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\Auth\AdminAuthController;
 
 Route::get('/informasi', [InformasiKalkulatorController::class, 'tampilkan']);
 Route::get('/home', [HomeController::class, 'tampilkan']);
@@ -31,4 +32,11 @@ Route::get('/registeruser', function () {
 
 Route::get('/welcome', function () {
     return view('welcome');
+});
+
+Route::prefix('admin')->group(function () {
+    Route::get('/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
+    Route::post('/login', [AdminAuthController::class, 'login']);
+    Route::get('/kuis', [AdminAuthController::class, 'showkuisForm'])->name('admin.kuis');
+    Route::post('/kuis', [AdminAuthController::class, 'kuis']);
 });
