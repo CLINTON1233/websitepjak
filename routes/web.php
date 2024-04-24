@@ -6,7 +6,7 @@ use App\Http\Controllers\InformasiKalkulatorController;
 use App\Http\Controllers\QuizPajakController;
 use App\Http\Controllers\PenghasilanController;
 use App\Http\Controllers\layananPajakController;
-use App\Http\Controllers\perhitunganpajakController;
+use App\Http\Controllers\perhitunganPajakController;
 
 // Route::get('/informasi', [InformasiKalkulatorController::class, 'index'])->name('informasiWajibPajak'); // Perbarui rute di sini
 // Route::post('/save-informasi', [InformasiKalkulatorController::class, 'saveInformasiWajibPajak'])->name('saveInformasiWajibPajak');
@@ -24,8 +24,7 @@ Route::get('/quiz', [QuizPajakController::class, 'tampilkan']); // Mengubah nama
 Route::get('/penghasilan', [PenghasilanController::class, 'tampilkan']);
 
 //Layanan
-Route::get('/layanan_pajak', [layananpajakController::class, 'tampilkan']);
+Route::get('/layanan', [layananPajakController::class, 'tampilkan']);
 
 //Pehitungan
-Route::get('/perhitungan_pajak', [perhitunganpajakController::class, 'tampilkan']);
-
+Route::get('/perhitungan_pajak', [perhitunganPajakController::class, 'tampilkan']);
