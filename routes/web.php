@@ -18,13 +18,3 @@ Route::get('/home', [HomeController::class, 'tampilkan']);
 Route::get('/welcome', function () {
     return view('welcome');
 });
-
-Route::get('/quiz', [QuizPajakController::class, 'tampilkan']); // Mengubah nama rute menjadi /quiz
-
-Route::get('/penghasilan', [PenghasilanController::class, 'tampilkan']);
-
-//Layanan
-Route::get('/layanan', [layananPajakController::class, 'tampilkan']);
-
-//Pehitungan
-Route::get('/perhitungan_pajak', [perhitunganPajakController::class, 'tampilkan']);
