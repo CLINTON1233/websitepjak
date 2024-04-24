@@ -17,8 +17,6 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-//Quiz
-Route::get('/Quiz_pajak', [QuizPajakController::class, 'tampilkan']);
+Route::get('/quiz', [QuizPajakController::class, 'tampilkan']); // Mengubah nama rute menjadi /quiz
 
-//Kalkulator
 Route::get('/penghasilan', [PenghasilanController::class, 'tampilkan']);

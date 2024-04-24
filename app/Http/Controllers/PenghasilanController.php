@@ -12,4 +12,3 @@ class PenghasilanController extends Controller
         return view('penghasilan');
     }
 }
-
